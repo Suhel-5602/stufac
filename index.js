@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 const PORT = 5000;
+const cors = require('cors');
 const Student = require("./models/studentModel");
 const Faculty = require("./models/facultyModel");
 app.use(express.json());
+app.use(cors());
 require('./db')
 
 app.get("/",(req, res)=>{
